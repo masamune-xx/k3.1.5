@@ -145,10 +145,9 @@ async function userAdd() {
             addForm.find('#newPassword').val('')
             addForm.find(roles()).val('')
         } else {
-            let body = await response.json()
             let alert = `
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    ${body.info}
+                    <a>Something went wrong</a>
                     <button class="btn-close btn-sm"
                             data-bs-dismiss="alert"
                             aria-label="Close">
@@ -260,10 +259,9 @@ async function userEdit(modal, id) {
             await userList()
             modal.modal('hide')
         } else {
-            let body = await response.json()
             let alert = `
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    ${body.info}
+                    <a>Something went wrong</a>
                     <button class="btn-close btn-sm"
                             data-bs-dismiss="alert"
                             aria-label="Close">
@@ -322,10 +320,9 @@ async function userDelete(modal, id) {
             await userList()
             modal.modal('hide')
         } else {
-            let body = await response.json()
             let alert = `
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    ${body.info}
+                    <a>Something went wrong</a>
                     <button class="btn-close btn-sm"
                             data-bs-dismiss="alert"
                             aria-label="Close">
