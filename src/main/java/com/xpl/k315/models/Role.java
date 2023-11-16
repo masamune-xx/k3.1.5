@@ -1,6 +1,9 @@
 package com.xpl.k315.models;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Column;
@@ -11,7 +14,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Objects;
 
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "roles")
 public class Role implements GrantedAuthority {
@@ -22,13 +28,6 @@ public class Role implements GrantedAuthority {
 
     @Column(name = "name", unique = true)
     private String name;
-
-    public Role() {
-    }
-
-    public Role(String name) {
-        this.name = name;
-    }
 
     @Override
     public String toString() {
