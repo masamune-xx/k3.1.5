@@ -304,9 +304,7 @@ async function userDelete(modal, id) {
                     <input type="email" class="form-control mb-3" id="deleteEmail" value="${user.email}" disabled>
                     
                     <label for="deleteRoles"><b>Role</b></label>
-                    <select class="form-select" multiple size="2" id="deleteRoles" disabled>
-                    <option>${user.roles.map(role => ' ' + role.name)}</option>
-                    </select>
+                    <input type="text" class="form-control" id="deleteRoles" value="${user.roles.map(role => ' ' + role.name)}" disabled>
                 </div>
             </form>
             `
