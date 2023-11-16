@@ -137,7 +137,7 @@ async function userAdd() {
 
         const response = await userFetch.userAdd(data)
         if (response.ok) {
-            userList()
+            await userList()
             addForm.find('#newFirstName').val('')
             addForm.find('#newLastName').val('')
             addForm.find('#newAge').val('')
