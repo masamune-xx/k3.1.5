@@ -138,12 +138,6 @@ async function userAdd() {
         const response = await userFetch.userAdd(data)
         if (response.ok) {
             await userList()
-            addForm.find('#newFirstName').val('')
-            addForm.find('#newLastName').val('')
-            addForm.find('#newAge').val('')
-            addForm.find('#newEmail').val('')
-            addForm.find('#newPassword').val('')
-            addForm.find(roles()).val('')
         } else {
             let alert = `
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
